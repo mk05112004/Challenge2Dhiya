@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --color-Green:hsl(75, 94%, 57%);
+  --color-White: hsl(0, 0%, 100%);
+  --color-Grey: hsl(0, 0%, 20%);
+  --color-Dark-Grey: hsl(0, 0%, 12%);
+  --color-Off-Black: hsl(0, 0%, 8%);
+  --fw-normal: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  font-family: "Inter",sans-serif;
+  font-size: 1.4rem;
+  font-weight: var(--fw-normal);
+  background-color: var(--color-Off-Black);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+ul{
+  list-style: none;
+}
+a{
+  display: block;
+  text-decoration: none;
+}
+.recipe-card{
+  padding: 15rem;
+  margin: 9rem auto 0;
+}
+.second-card{
+  background-color: var(--color-Dark-Grey);
+  width: 32rem;
+  padding: 1.8rem;
+  text-align: center;
+  height: 61.5rem;
+  padding: 1.8rem;
+  border-radius: 0.8rem;
+  text-align: center;
+}
+.second-card .profile-img{
+  width: 80px;
+  aspect-ratio: 1;
+  margin: 0 auto;
+  position: relative; /* Ensure proper positioning for overlay */
+}
+.second-card .profile-img img {
+  display: block;
+  max-width: 100%;
+  border-radius: 50%;
+  height: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease; /* Transition for smooth change */
+}
+.second-card .hover-image {
+  opacity: 0; /* Initially hide the second image */
+}
+.second-card .profile-title{
+  margin-top: 3rem;
+}
+.second-card .profile-title h1{
+  color: var(--color-White);
+  font-weight: 500;
+  font-size: 2.3rem;
+}
+.second-card .profile-title h2{
+  margin-top: 1rem;
+  color: var(--color-Green);
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+}
+.second-card .profile-header p{
+  color: var(--color-White);
+}
+.second-card .social-media{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  
+}
+.second-card .social-media li{
+  width: 100%;
+}
+.second-card .social-media li a {
+  background-color: var(--color-Grey);
+  color: var(--color-White);
+  padding: 1.6rem 0;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  font-weight: var(--fw-semi-bold);
+  transition: all .3s ease-in-out;
+}
+.second-card .social-media li:hover a {
+  background-color: var(--color-Green);
+  color: var(--color-Off-Black);
+
+}
+@media(min-width: 1200px) {
+  .recipe-card{
+    margin-top: 0;
+  }
+  .second-card{
+    width: 38rem;
+    padding: 3rem;
+  }
+}
+
+/* Show the second image on hover */
+.profile-img:hover .hover-image {
+  opacity: 1;
+}
